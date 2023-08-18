@@ -15,6 +15,7 @@
     "dist"
   ],
   "scripts": {
+    "postinstall": "shx cp -n .env.template .env && shx cp -n demo.csv data.csv",
     "start": "ts-node src/index.ts",
     "test": "vitest run",
     "test:watch": "vitest --watch",
@@ -40,8 +41,12 @@
     "axios": "^1.4.0",
     "better-sqlite3": "^8.5.0",
     "csv-parse": "^5.4.0",
+    "csv-stringify": "^6.4.0",
+    "dotenv": "^16.3.1",
     "kysely": "^0.26.1",
     "p-limit": "^3.1.0",
+    "p-retry": "^4.6.2",
+    "shx": "^0.3.4",
     "ts-node": "^10.9.1"
   }
 }
